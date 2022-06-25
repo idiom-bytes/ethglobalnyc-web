@@ -2,9 +2,9 @@ import axios from "axios";
 
 import { API_URL } from "../env";
 
-const URL_PREFIX = "/transactions";
+const URL_PREFIX = "/app-watchers";
 
-export const getTransactionsForUser = async (userAddress: string) => {
+export const getAppWatchers = async (userAddress: string) => {
   try {
     const rawData = await axios.get(
       `${API_URL}${URL_PREFIX}?user=${userAddress}`
@@ -15,9 +15,12 @@ export const getTransactionsForUser = async (userAddress: string) => {
   return {};
 };
 
-export const getTransactionsForApp = async (appId: string) => {
+export const createAppWatchers = async (userAddress: string, appId: string) => {
   try {
-    const rawData = await axios.get(`${API_URL}${URL_PREFIX}?app=${appId}`);
+    const rawData = await axios.post(`${API_URL}${URL_PREFIX}`, {
+      user: userAddress,
+      appId,
+    });
     return rawData.data;
   } catch (e) {}
 

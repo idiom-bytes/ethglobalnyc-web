@@ -1,11 +1,13 @@
 import axios from "axios";
 
-import { API_URL } from "env";
+import { API_URL } from "../env";
 
-export const requestVisualData = async () => {
+const URL_PREFIX = "/chains";
+
+export const getChains = async () => {
   try {
-    const visualData = await axios.get(API_URL);
-    return visualData.data;
+    const rawData = await axios.get(`${API_URL}${URL_PREFIX}`);
+    return rawData.data;
   } catch (e) {}
 
   return {};
