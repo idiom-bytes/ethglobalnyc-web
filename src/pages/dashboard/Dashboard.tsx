@@ -23,24 +23,6 @@ import Chart from "./Chart";
 import Deposits from "./Deposits";
 import Orders from "./Orders";
 
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
 const drawerWidth: number = 240;
 
 interface AppBarProps extends MuiAppBarProps {
@@ -208,7 +190,15 @@ function DashboardContent() {
             </IconButton>
           </Toolbar>
         </AppBar>
-        <Drawer variant="permanent" open={true}>
+        <Drawer
+          variant="permanent"
+          open={true}
+          sx={{
+            boxShadow:
+              " 0 2px 22px 0 rgb(0 0 0 / 20%), 0 2px 30px 0 rgb(0 0 0 / 15%)",
+            zIndex: 1,
+          }}
+        >
           <Toolbar
             sx={{
               display: "flex",

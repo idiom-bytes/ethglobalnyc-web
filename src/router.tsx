@@ -14,6 +14,17 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import Transactions from "./pages/transactions/App";
 
 function AppRouter() {
+  // Setting up for pre auth
+  if (false) {
+    return (
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<CatchAll />} />
+      </Routes>
+    );
+  }
+
+  // Only authenticated routes
   return (
     <Routes>
       <Route path="/app/:API_ID/crm" element={<Crm />} />
@@ -21,7 +32,6 @@ function AppRouter() {
       <Route path="/app/:API_ID/transactions" element={<Transactions />} />
       <Route path="/app/:API_ID" element={<Dashboard />} />
       <Route path="/apps" element={<Apps />} />
-      <Route path="/login" element={<Login />} />
       <Route path="*" element={<CatchAll />} />
     </Routes>
   );
