@@ -17,7 +17,7 @@ import Paper from "@mui/material/Paper";
 import Link from "@mui/material/Link";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+import UsersIcon from "@mui/icons-material/Person";
 import { mainListItems } from "./listItems";
 import Chart from "./Chart";
 import Deposits from "./Deposits";
@@ -141,7 +141,7 @@ function DashboardContent() {
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
+                <UsersIcon />
               </Badge>
             </IconButton>
           </Toolbar>
@@ -155,9 +155,9 @@ function DashboardContent() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Company name
+              App: On-chain Game
             </Typography>
-            <nav>
+            {/* <nav>
               <Link
                 variant="button"
                 color="text.primary"
@@ -182,10 +182,10 @@ function DashboardContent() {
               >
                 Support
               </Link>
-            </nav>
+            </nav> */}
             <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <NotificationsIcon />
+              <Badge badgeContent={""} color="secondary">
+                <UsersIcon />
               </Badge>
             </IconButton>
           </Toolbar>

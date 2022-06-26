@@ -32,6 +32,7 @@ function AppRouter() {
       <Route path="/app/:API_ID/transactions" element={<Transactions />} />
       <Route path="/app/:API_ID" element={<Dashboard />} />
       <Route path="/apps" element={<Apps />} />
+      <Route path="/login" element={<Login />} />
       <Route path="*" element={<CatchAll />} />
     </Routes>
   );

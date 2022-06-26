@@ -13,7 +13,7 @@ import TransactionsIcon from "@mui/icons-material/AutoAwesomeMotion";
 export const mainListItems = (
   <React.Fragment>
     <Link to={"/app"}>
-      <ListItemButton>
+      <ListItemButton sx={{ mt: 3, mb: 3 }}>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
@@ -22,7 +22,7 @@ export const mainListItems = (
     </Link>
     <Divider />
     <Link to={"/app/:API_ID/crm"}>
-      <ListItemButton>
+      <ListItemButton sx={{ mt: 3, mb: 3 }}>
         <ListItemIcon>
           <PeopleIcon />
         </ListItemIcon>
@@ -31,7 +31,7 @@ export const mainListItems = (
     </Link>
     <Divider />
     <Link to={"/app/:API_ID/contracts"}>
-      <ListItemButton>
+      <ListItemButton sx={{ mt: 3, mb: 3 }}>
         <ListItemIcon>
           <ContractsIcon />
         </ListItemIcon>
@@ -40,7 +40,7 @@ export const mainListItems = (
     </Link>
     <Divider />
     <Link to={"/app/:API_ID/transactions"}>
-      <ListItemButton>
+      <ListItemButton sx={{ mt: 3, mb: 3 }}>
         <ListItemIcon>
           <TransactionsIcon />
         </ListItemIcon>
